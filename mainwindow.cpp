@@ -16,6 +16,8 @@
 #include <Qt3DExtras/QSphereMesh>
 #include <Qt3DExtras/QPhongMaterial>
 
+#include "geombox.h"
+
 
 MainWindow::MainWindow(QWidget *parent)
     : Qt3DExtras::Qt3DWindow()
@@ -77,6 +79,36 @@ MainWindow::MainWindow(QWidget *parent)
         m_coneEntity->addComponent(coneMaterial);
         m_coneEntity->addComponent(coneTransform);
     }
+
+    GeomBox box1;
+    box1.Properties()["size"].append(1);
+    box1.Properties()["size"].append(2);
+    box1.Properties()["size"].append(3);
+    box1.Properties()["origin"].append(0.5);
+    box1.Properties()["origin"].append(0);
+    box1.Properties()["origin"].append(0);
+
+    box1.toEntity(rootEntity);
+
+    GeomBox box2;
+    box2.Properties()["size"].append(3);
+    box2.Properties()["size"].append(1);
+    box2.Properties()["size"].append(2);
+    box2.Properties()["origin"].append(1);
+    box2.Properties()["origin"].append(2);
+    box2.Properties()["origin"].append(3);
+
+    box2.toEntity(rootEntity);
+
+    GeomBox box3;
+    box3.Properties()["size"].append(0.1);
+    box3.Properties()["size"].append(0.1);
+    box3.Properties()["size"].append(0.1);
+    box3.Properties()["origin"].append(0);
+    box3.Properties()["origin"].append(0);
+    box3.Properties()["origin"].append(0);
+
+    box3.toEntity(rootEntity);
 
     setRootEntity(rootEntity);
 }
