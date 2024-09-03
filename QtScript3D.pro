@@ -1,4 +1,4 @@
-QT       += core gui
+QT += core gui
 QT += 3dcore 3drender 3dinput 3dextras
 QT += widgets
 
@@ -17,13 +17,17 @@ SOURCES += \
     geomobject.cpp \
     main.cpp \
     mainwindow.cpp \
-    scenemodifier.cpp
+    scenemodifier.cpp \
+    trianglegeomentity.cpp \
+    trianglegeometryrenderer.cpp
 
 HEADERS += \
     geombox.h \
     geomobject.h \
     mainwindow.h \
-    scenemodifier.h
+    scenemodifier.h \
+    trianglegeomentity.h \
+    trianglegeometryrenderer.h
 
 FORMS += \
     mainwindow.ui

@@ -7,7 +7,7 @@
 #include <QVector>
 #include <Qt3DCore/QEntity>
 
-enum class geometry {box, sphere, tube, cone};
+enum class geometry {box, sphere, tube, cone, cylinder, triangle};
 
 class GeomObject
 {

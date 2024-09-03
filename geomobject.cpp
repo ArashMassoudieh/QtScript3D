@@ -72,6 +72,10 @@ bool GeomObject::SetType(const QString &typ)
         type = geometry::tube;
     else if (typ.toLower()=="cone")
         type = geometry::cone;
+    else if (typ.toLower()=="cylinder")
+        type = geometry::cylinder;
+    else if (typ.toLower()=="triangle")
+        type = geometry::triangle;
     else
         out = false;
     return out;

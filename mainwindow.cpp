@@ -16,6 +16,8 @@
 #include <Qt3DExtras/QSphereMesh>
 #include <Qt3DExtras/QPhongMaterial>
 
+#include "trianglegeometryrenderer.h"
+
 #include "geombox.h"
 
 
